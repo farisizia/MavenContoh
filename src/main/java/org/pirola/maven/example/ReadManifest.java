@@ -53,7 +53,7 @@ public final class ReadManifest {
      *             Error on opening Manifest file.
      */
     public static Map<String, String> getMainAttributes() throws IOException {
-        Map<String, String> mainAttributes = new HashMap<>();
+        Map<String, String> mainAttributes = new HashMap<>()
         try (JarFile jar =
                 new JarFile(System.getProperty("java.class.path"));) {
             final Manifest manifest = jar.getManifest();
